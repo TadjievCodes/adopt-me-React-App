@@ -3,11 +3,12 @@
 
 
 // your code goes here for now
-    const Pet = () => {
-        return React.createElement( "div",  {}, [
-            React.createElement("h1", {}, "Luna"),
-            React.createElement("h2", {}, "Dog"),
-            React.createElement("h2", {}, "Havanese"),
+    const Pet = ({ name, animal, breed })  => {
+        return React.createElement( "div",  {}, 
+        [
+            React.createElement("h1", {}, name),
+            React.createElement("h2", {}, animal),
+            React.createElement("h2", {}, breed),
             
          ] );
     };
@@ -25,7 +26,7 @@
                 React.createElement("h1", {}, "Adopt Me!"),
                 React.createElement(Pet, {
                 name: "Luna", 
-                Dog: "Havanese",
+                animal: "Dog",
                 breed: "Havanese"
                 }),
                 React.createElement(Pet, {
