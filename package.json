@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "format": "prettier \"src/**/*.{js, html}\"",
+    "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,15 @@
   },
   "homepage": "https://github.com/TadjievCodes/adopt-me-React-App#readme",
   "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-react": "^7.24.0",
+    "parcel-bundler": "^1.12.5",
     "prettier": "^2.3.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
