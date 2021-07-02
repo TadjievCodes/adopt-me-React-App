@@ -24,13 +24,15 @@ const SearchParams = () => {
             id="animal"
             value={animal}
             onChange={(e) => setAnimal(e.target.value)}
-            onBlur={e => setAnimal(e.target.value)}
-            >
+            onBlur={(e) => setAnimal(e.target.value)}
+          >
             <option>All</option>
-            {ANIMALS.map(animal => (
-                  <option value={animal}>{animal}</option> 
+            {ANIMALS.map((animal) => (
+              <option key={animal} value={animal}>
+                {animal}
+              </option>
             ))}
-            </select>
+          </select>
         </label>
         <button>Submit</button>
       </form>
